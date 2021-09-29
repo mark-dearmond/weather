@@ -1,0 +1,14 @@
+.header {
+    background: #D9FBFF;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-right: -7.5px;
+    margin-left: -7.5px;
+    padding: 16px;
+}
+
+.header h1, 
+.header h4 {
+    color: #65AED5;
+}
+

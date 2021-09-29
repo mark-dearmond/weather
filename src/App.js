@@ -1,10 +1,13 @@
-
+import { Container } from "react-bootstrap";
+import { Title } from "./components/title";
+import { Frame } from "./components/frame";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Container>
+      <Title></Title>
+      <Frame></Frame>
+    </Container>
   );
 }
 

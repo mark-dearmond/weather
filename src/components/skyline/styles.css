@@ -1,0 +1,58 @@
+.skyline {
+    height: 250px;
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+}
+
+.cloud {
+    display: none;
+}
+
+@keyframes floating {
+    0% {
+        top: 50px;
+    }
+
+    50% {
+        top: 45px;
+    }
+
+    100% {
+        top: 50px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .skyline {
+        height: 330px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .cloud {
+        position: absolute;
+        top: 50px;
+        max-width: 25%;
+        display: block;
+    }
+    .left-cloud {
+        animation: floating 2s infinite ease-in-out;
+        left: -50px;
+    }
+    .right-cloud {
+        animation: floating 2s infinite 1s ease-in-out;
+        right: -50px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .left-cloud {
+        left: -100px;
+    }
+    
+    .right-cloud {
+        right: -75px;
+    }
+}
+
