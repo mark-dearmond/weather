@@ -9,10 +9,6 @@ export const Title = () => {
     return (
         <Row className="title text-center">
             <Col>
-                {/* <h3>
-                    <Image src={location}></Image>
-                    <span>Dallas, TX</span>
-                </h3> */}
                 <Stack direction="horizontal" className="justify-content-center" gap={3}>
                     <Image src={location}></Image>
                     <h3>Dallas, TX</h3>
