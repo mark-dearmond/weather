@@ -35,7 +35,7 @@
     transition: .4s;
 }
 
-.temperature:before {
+.units:before {
     position: absolute;
     content: "C\00B0";
     font-weight: 600;
@@ -46,11 +46,11 @@
     transition: .4s;
 }
 
-.temperature:after {
+.units:after {
     position: absolute;
     content: "F\00B0";
     font-weight: 600;
-    color: white;
+    color: #2685BD;
     right: 4px;
     bottom: 3px;
     -webkit-transition: .4s;
@@ -67,12 +67,12 @@ input:checked + .slider:before {
     transform: translateX(29px);
 }
 
-.temperature.checked:before {
+.units.imperial:before {
     color: white;
 }
 
-.temperature.checked:after {
-    color: #2685BD;
+.units.metric:after {
+    color: white;
 }
 
 .slider.round {
