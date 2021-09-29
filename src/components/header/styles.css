@@ -12,3 +12,9 @@
     color: #65AED5;
 }
 
+@media only screen and (max-width: 576px) {
+    .header .wi {
+        font-size: 30px;
+    }
+}
+
