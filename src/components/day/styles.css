@@ -3,5 +3,11 @@
 }
 
 .day:not(:last-child) {
-    border-right: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+@media only screen and (min-width: 576px) {
+    .day:not(:last-child) {
+        border-right: 1px solid #D8D8D8;
+    }
 }

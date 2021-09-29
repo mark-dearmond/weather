@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-export const Toggle = () => {
-    const [unit, setUnit] = useState('imperial');
+export const Toggle = ({units}) => {
     const handleUnitChange = () => {
-        if(unit === 'imperial') {
-            setUnit('metric')
+        if(units === 'imperial') {
+            units = 'metric';
         } else{
-            setUnit('imperial')  
+            units = 'imperial';
         } 
     }
     return (
         <label className="switch">
-            <input onClick={handleUnitChange} type="checkbox" checked={unit === 'imperial' ? true : false}/>
+            <input onChange={handleUnitChange} type="checkbox" checked={units === 'imperial' ? true : false}/>
             <span className="slider round"></span>
-            <span className={`units ${unit}`}></span>
+            <span className={`units ${units}`}></span>
         </label>
     )
 }

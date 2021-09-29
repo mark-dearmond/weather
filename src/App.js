@@ -10,21 +10,22 @@ const  LONGITUDE = '-96.7970';
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [weather, setWeather] = useState(null);
+  const [units, setUnits] = useState('imperial');
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://api.openweathermap.org/data/2.5/onecall?lat=${LATITUDE}&lon=${LONGITUDE}&appid=${APP_ID}&units=imperial`)
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${LATITUDE}&lon=${LONGITUDE}&appid=${APP_ID}&units=${units}`)
     .then(response => response.json())
     .then(data => {
-      setIsLoading(false);
       setWeather(data);
+      setIsLoading(false);
     })
-  },[])
-
+  },[units])
   return (
     <Container>
       <Title></Title>
-      <Frame></Frame>
+      {!isLoading && weather && <Frame weather={weather} units={units}></Frame>}
+      {isLoading && !weather && 'Loading...'}
     </Container>
   );
 }

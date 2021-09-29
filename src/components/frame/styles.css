@@ -1,3 +1,5 @@
-.frame {
-    box-shadow: 0 0 15px rgba(0,0,0, .2);
+@media only screen and (min-width: 576px) {
+    .frame {
+        box-shadow: 0 0 15px rgba(0,0,0, .2);
+    }
 }
