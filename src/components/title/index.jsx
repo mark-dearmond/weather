@@ -7,8 +7,8 @@ import './styles.css';
 export const Title = () => {
     const today = new Date()
     return (
-        <Row className="title text-center">
-            <Col>
+        <Row>
+            <Col className="title text-center">
                 <Stack direction="horizontal" className="justify-content-center" gap={3}>
                     <Image src={location}></Image>
                     <h3>Dallas, TX</h3>

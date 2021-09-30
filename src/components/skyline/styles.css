@@ -1,5 +1,5 @@
 .skyline {
-    height: 250px;
+    height: 175px;
     background-size: cover;
     background-position: bottom center;
     position: relative;
@@ -20,6 +20,19 @@
 
     100% {
         top: 50px;
+    }
+}
+
+
+@media only screen and (min-width: 400px) {
+    .skyline {
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .skyline {
+        height: 250px;
     }
 }
 

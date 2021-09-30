@@ -21,10 +21,10 @@ export const Header = () => {
             </h1>
             <WeatherIcon iconId={state[state.units].current.weather[0].id} name="owm"></WeatherIcon>
             <div>
-                <h4>{state[state.units].current.weather[0].main}</h4>
+                <h4 className="text-capitalize">{state[state.units].current.weather[0].description}</h4>
                 <h4>{parseInt(state.fahrenheit.current.wind_speed)} mph</h4>
             </div>
-            <div className="ms-auto">
+            <div className="ms-auto toggle-wrapper">
                 <Toggle></Toggle>
             </div>
         </Stack>
