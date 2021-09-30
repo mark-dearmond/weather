@@ -11,6 +11,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [weather, setWeather] = useState(null);
   const [units, setUnits] = useState('imperial');
+  const toggleUnit = () => setUnits(units === 'imperial' ? 'metric' : 'imperial');
 
   useEffect(() => {
     setIsLoading(true);
@@ -18,13 +19,14 @@ function App() {
     .then(response => response.json())
     .then(data => {
       setWeather(data);
-      setIsLoading(false);
+      setIsLoading(false)
     })
-  },[units])
+  },[units]);
+
   return (
     <Container>
       <Title></Title>
-      {!isLoading && weather && <Frame weather={weather} units={units}></Frame>}
+      {!isLoading && weather && <Frame weather={weather} units={units} toggleUnit={toggleUnit}></Frame>}
       {isLoading && !weather && 'Loading...'}
     </Container>
   );

@@ -4,7 +4,7 @@ import { Stack } from 'react-bootstrap';
 import { WeatherIcon } from 'weather-react-icons';
 import './styles.css';
 
-export const Header = ({weather, units}) => {
+export const Header = ({weather, units, toggleUnit}) => {
     return (
         <Stack direction="horizontal" className="header" gap={3}>
             <h1>{parseInt(weather.current.temp)}&deg;</h1>
@@ -14,7 +14,7 @@ export const Header = ({weather, units}) => {
                 <h4>{parseInt(weather.current.wind_speed)} mph</h4>
             </div>
             <div className="ms-auto">
-                <Toggle units={units}></Toggle>
+                <Toggle units={units} toggleUnit={toggleUnit}></Toggle>
             </div>
         </Stack>
     )

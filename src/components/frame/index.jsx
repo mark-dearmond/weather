@@ -5,11 +5,11 @@ import { Forecast } from "../forecast";
 import './styles.css';
 import { Row, Col } from 'react-bootstrap';
 
-export const Frame = ({weather, units}) => {
+export const Frame = ({weather, units, toggleUnit}) => {
     return (
         <Row className="frame">
             <Col>
-                <Header weather={weather} units={units}></Header>
+                <Header weather={weather} units={units} toggleUnit={toggleUnit}></Header>
                 <Skyline></Skyline>
                 <Forecast weather={weather}></Forecast>
             </Col>
