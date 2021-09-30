@@ -25,13 +25,14 @@ function App() {
       dispatch({type: 'IS_LOADING', payload: false});
     })
     .catch(e => {
-      // dispatch({type: 'ERROR', payload: e})
+      dispatch({type: 'ERROR', payload: e})
     })
   },[]);
 
   return (
       <Container>
-        {!state.isLoading && state.fahrenheit && <Title></Title> && <Frame></Frame>}
+        <Title></Title>
+        {!state.isLoading && state.fahrenheit && <Frame></Frame>}
         {state.isLoading && <Loader className="d-flex align-items-center justify-content-center" type="TailSpin" color="#FFFFFF" height={100} width={100}/>}
       </Container> 
   );
