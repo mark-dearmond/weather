@@ -1,0 +1,21 @@
+.day {
+    padding: 16px;
+}
+
+.day:not(:last-child) {
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.day .animated-container {
+    justify-content: center;
+}
+
+.day .animated-container:after {
+    content: "\00B0";
+}
+
+@media only screen and (min-width: 576px) {
+    .day:not(:last-child) {
+        border-right: 1px solid #D8D8D8;
+    }
+}

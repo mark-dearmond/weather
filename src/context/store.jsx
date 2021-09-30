@@ -25,8 +25,8 @@ export const StateProvider = ({ children }) => {
                 currentState.fahrenheit = action.payload;
                 return currentState
             case "SET_CELSIUS" :
-                    currentState.celsius = action.payload;
-                    return currentState
+                currentState.celsius = action.payload;
+                return currentState
             default:
                 throw new Error();
         }
