@@ -5,11 +5,14 @@ import 'weather-react-icons/lib/css/weather-icons.css';
 import './index.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {StateProvider} from './context/store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <StateProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </StateProvider>,
   document.getElementById('root')
 );
 

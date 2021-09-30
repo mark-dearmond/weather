@@ -67,11 +67,11 @@ input:checked + .slider:before {
     transform: translateX(29px);
 }
 
-.units.imperial:before {
+.units.fahrenheit:before {
     color: white;
 }
 
-.units.metric:after {
+.units.celsius:after {
     color: white;
 }
 
